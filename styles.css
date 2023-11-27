@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000;
-    color: #fff;
+    color: #fafaf9;
 }
 
 header {
@@ -62,4 +62,36 @@ header img {
     width: 100px;
     /* Defina o valor desejado para a largura */
     height: auto;
+}
+
+/* Adicione media queries para ajustes responsivos */
+
+/* Tablets e dispositivos com largura de tela até 768px */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .menu li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Telefones e dispositivos com largura de tela até 480px */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .menu a {
+        font-size: 0.9em;
+    }
 }
