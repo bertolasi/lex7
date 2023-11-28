@@ -64,6 +64,22 @@ header img {
     height: auto;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+div destaque-produto img src {
+
+    width: 500px;
+    /* Defina o valor desejado para a largura */
+    height: auto;
+}
+
+
+
+
 /* Adicione media queries para ajustes responsivos */
 
 /* Tablets e dispositivos com largura de tela até 768px */
@@ -82,6 +98,10 @@ header img {
     .menu li {
         margin: 0;
         margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 }
 
