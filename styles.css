@@ -4,9 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header {
-    background-color: #1f1f4d;
-}
+
 
 
 header {
@@ -134,7 +132,7 @@ header h1 {
 }
 
 .produto {
-    width: 30%;
+    width: 40%;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 10px;
@@ -177,7 +175,7 @@ header h1 {
 }
 
 /* Telefones e dispositivos com largura de tela até 480px */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 552px) {
     .logo {
         font-size: 1.2em;
     }
