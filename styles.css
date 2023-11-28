@@ -1,17 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fafaf9;
+    background-color: #07071e;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-color: #333;
+    background-color: #1f1f4d;
+}
+
+
+header {
+    background-color: #302f2f;
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo {
@@ -38,6 +42,7 @@ nav {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
+
 }
 
 .menu a:hover {
@@ -70,48 +75,97 @@ header img {
     font-size: 1.5em;
 }
 
-div destaque-produto img src {
 
-    width: 500px;
-    /* Defina o valor desejado para a largura */
+
+/* Estilos gerais para dispositivos moveis */
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização do header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+header img {
+    max-width: 100%;
     height: auto;
 }
 
+header h1 {
+    margin-top: 10px;
+}
+
+/* Estilização da lista de produtos */
+
+.destaque-produto {
+    background-color: #a2683f;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.destaque-produto img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.produto {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
 
 
+}
 
-/* Adicione media queries para ajustes responsivos */
+.produto img {
 
-/* Tablets e dispositivos com largura de tela até 768px */
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+/* Estilos para dispositivos móveis */
 @media screen and (max-width: 768px) {
-    header {
+    header img {
+        width: 80%;
+    }
+
+    .lista-produtos {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .menu {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-    }
-
-    .menu li {
-        margin: 0;
-        margin-bottom: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
+    .produto {
+        width: 80%;
     }
 }
 
-/* Telefones e dispositivos com largura de tela até 480px */
-@media screen and (max-width: 480px) {
-    .logo {
-        font-size: 1.2em;
+@media screen and (max-width: 576px) {
+    header img {
+        width: 100%;
     }
 
-    .menu a {
-        font-size: 0.9em;
+    .produto {
+        width: 100%;
     }
 }
