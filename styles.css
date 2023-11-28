@@ -5,8 +5,6 @@ body {
 }
 
 
-
-
 header {
     background-color: #302f2f;
     padding: 1em;
@@ -132,20 +130,20 @@ header h1 {
 }
 
 .produto {
-    width: 40%;
+    width: 25%;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    padding: 10px;
-
+    padding: 20px;
+    border-radius: 16px;
 
 }
 
 .produto img {
 
-    width: 40%;
+    width: 50%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 16px;
 
 }
 
