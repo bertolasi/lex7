@@ -130,17 +130,21 @@ header h1 {
 }
 
 .produto {
-    width: 25%;
+    width: 26%;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 16px;
+    border: 5px solid #d60f0f;
+    padding: 5px;
+    border-radius: 8px;
 
+}
+
+.produto p input {
+    width: 26%;
 }
 
 .produto img {
 
-    width: 50%;
+    width: 70%;
     height: auto;
     object-fit: cover;
     border-radius: 16px;
@@ -173,7 +177,7 @@ header h1 {
 }
 
 /* Telefones e dispositivos com largura de tela até 480px */
-@media screen and (max-width: 552px) {
+@media screen and (max-width: 480px) {
     .logo {
         font-size: 1.2em;
     }
