@@ -36,7 +36,7 @@ nav {
 
 .menu a {
     text-decoration: none;
-    color: #fff;
+    color: #111111;
     transition: color 0.3s;
 
 }
@@ -84,7 +84,7 @@ body {
 
 /* Estilização do header */
 header {
-    background-color: #333;
+    background-color: #ffffff;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -175,6 +175,8 @@ header h1 {
         display: block;
     }
 }
+
+
 
 /* Telefones e dispositivos com largura de tela até 480px */
 @media screen and (max-width: 480px) {
