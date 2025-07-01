@@ -1,0 +1,83 @@
+Guia_Firebase_LEX7.txt
+csharp
+Copiar
+Editar
+Integração do Site com Firebase Firestore
+=========================================
+
+Este guia mostra como integrar seu site HTML com o Firebase Firestore para armazenar mensagens do formulário de contato diretamente em um banco de dados.
+
+1. Criar um projeto no Firebase
+-------------------------------
+• Acesse https://console.firebase.google.com  
+• Clique em 'Adicionar Projeto'  
+• Siga as instruções e finalize a criação  
+• Vá até 'Firestore Database' e clique em 'Criar Banco de Dados'  
+• Escolha o modo de teste para começar  
+
+2. Adicionar o Firebase ao seu site
+-----------------------------------
+No final da sua página HTML (antes de </body>), adicione:
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>  
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>  
+<script src="js/firebase.js"></script>  
+
+3. Criar o arquivo js/firebase.js
+---------------------------------
+Copie o código abaixo e substitua pelos dados do seu projeto Firebase:
+
+```javascript
+const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_DOMÍNIO.firebaseapp.com",
+  projectId: "SEU_PROJECT_ID",
+  storageBucket: "SEU_PROJECT_ID.appspot.com",
+  messagingSenderId: "SEU_SENDER_ID",
+  appId: "SEU_APP_ID"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+document.getElementById('form-contato').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const mensagem = document.getElementById('mensagem').value;
+
+  db.collection("mensagens").add({
+    email,
+    mensagem,
+    data: new Date()
+  })
+  .then(() => alert("Mensagem enviada com sucesso!"))
+  .catch((error) => alert("Erro: " + error.message));
+});
+Atualizar o formulário HTML
+
+Substitua o formulário atual por:
+
+html
+Copiar
+Editar
+<form id="form-contato">
+  <input type="email" id="email" required>
+  <textarea id="mensagem" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+Estrutura de arquivos recomendada
+
+/index.html
+/contato.html
+/js/firebase.js
+/css/style.css
+/img/logo-lex7.png
+
+Pronto!
+
+Agora, sempre que alguém enviar o formulário, os dados irão para seu banco Firestore em tempo real.
+Você poderá visualizar tudo no console do Firebase.
+
+yaml
+Copiar
+Editar
