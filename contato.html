@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LEX7 | Contato</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .botao-whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    select, label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    #whatsapp-link {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo-lex7.png" alt="LEX7 Logo" class="logo" />
+    <nav>
+      <a href="index.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html" aria-current="page">Contato</a>
+    </nav>
+  </header>
+
+  <section id="orcamento">
+    <div class="card">
+      <h2>Solicitar Orçamento</h2>
+      <p>Escolha abaixo o serviço desejado e fale conosco diretamente pelo WhatsApp:</p>
+
+      <label for="servico">Tipo de serviço:</label>
+      <select id="servico" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+        <option>Higienização de ar condicionado</option>
+        <option>Instalação de Câmeras de segurança</option>
+        <option>Instalação de ventiladores</option>
+        <option>Instalação de chuveiro e duchas</option>
+        <option>Outros (quadros, prateleiras, suportes de TV...)</option>
+        <option>Instalação e substituição de tomadas, lâmpadas, interruptores e disjuntores</option>
+        <option>Manutenção e Reprogramação de controles e tag de porteiro eletrônico</option>
+        <option>Instalação de varal</option>
+        <option>Instalação de luminária</option>
+        <option>Troca de trilho de móveis e dobradiças</option>
+        <option>Troca de mangueira de fogão</option>
+        <option>Instalação e substituição de torneiras e sifão</option>
+      </select>
+
+      <a id="whatsapp-link" class="botao-whatsapp" target="_blank">💬 Falar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 LEX7. Todos os direitos reservados.
+  </footer>
+
+  <a href="https://wa.me/5527988601879" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp" aria-label="WhatsApp">
+    &#x2706;
+  </a>
+
+  <script>
+    const select = document.getElementById('servico');
+    const whatsappLink = document.getElementById('whatsapp-link');
+
+    select.addEventListener('change', function () {
+      const servicoSelecionado = select.value;
+      if (servicoSelecionado) {
+        const numero = '5527988601879';
+        const mensagem = `Olá, gostaria de solicitar o serviço de: ${servicoSelecionado}`;
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+        whatsappLink.href = url;
+        whatsappLink.style.display = 'inline-block';
+      } else {
+        whatsappLink.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
